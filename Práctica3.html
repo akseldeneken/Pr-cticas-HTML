@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rauw Alejandro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rauw Alejandro</h1>
+    </header>
+
+    <section id="info">
+        <h2>Biografía</h2>
+        <p id="bio-text">
+            Rauw Alejandro, nacido en Puerto Rico en 1993, es uno de los cantantes y compositores más influyentes en la música urbana y pop latina.
+            Conocido por éxitos como "Todo de Ti" y "Tattoo", su estilo musical incorpora reguetón, dancehall y R&B, lo que le ha permitido alcanzar 
+            reconocimiento mundial. Ha trabajado con artistas como Anuel AA, Camilo, y Bad Bunny, consolidándose como una figura clave en la escena musical.
+        </p>
+    </section>
+
+    <section id="imagenes">
+        <h2>Galería</h2>
+        <div id="image-container">
+            <img id="artist-image" src="https://www.wfla.com/wp-content/uploads/sites/71/2021/12/AP21327668132419.jpg?w=876&h=493&crop=1" alt="Rauw Alejandro">
+        </div>
+    </section>
+
+    <section id="acciones">
+        <h2>Interacciones</h2>
+        <!-- Botones de interacción -->
+        <button onclick="cambiarColor()">Cambiar Color de Fondo</button>
+        <button onclick="mostrarOcultarTexto()">Mostrar/Ocultar Biografía</button>
+        <button onclick="cambiarImagen()">Cambiar Imagen</button>
+    </section>
+
+    <script>
+        // Función para cambiar el color de fondo
+        function cambiarColor() {
+            const bioSection = document.getElementById('info');
+            bioSection.style.backgroundColor = bioSection.style.backgroundColor === 'lightblue' ? 'white' : 'lightblue';
+        }
+
+        // Función para mostrar/ocultar el texto de la biografía
+        function mostrarOcultarTexto() {
+            const bioText = document.getElementById('bio-text');
+            bioText.style.display = bioText.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Función para cambiar la imagen
+        function cambiarImagen() {
+            const artistImage = document.getElementById('artist-image');
+            const firstImage = "https://www.wfla.com/wp-content/uploads/sites/71/2021/12/AP21327668132419.jpg?w=876&h=493&crop=1";
+            const secondImage = "https://www.billboard.com/wp-content/uploads/2022/11/rauw-alejandro-2022-cr-Jora-Frantzis-billboard-1548.jpg?w=942&h=623&crop=1";
+            artistImage.src = artistImage.src === firstImage ? secondImage : firstImage;
+        }
+    </script>
+</body>
+</html>
